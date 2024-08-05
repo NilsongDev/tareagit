@@ -1,0 +1,132 @@
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop (master)
+$
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop (master)
+$ mkdir mi_directorio
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop (master)
+$ cd mi_directorio/
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ touch archivo.txt
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git init
+Initialized empty Git repository in C:/Users/nilzo/Desktop/mi_directorio/.git/
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        archivo.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git add archivo.txt
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git commit -m "agregar archivo  txt vacio"
+[master (root-commit) c168ff0] agregar archivo  txt vacio
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 archivo.txt
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git log
+commit c168ff06b36e8c4b9bf8222bdb29f553076e50ad (HEAD -> master)
+Author: zkr911 <63081032+zkr911@users.noreply.github.com>
+Date:   Sun Aug 4 23:10:07 2024 -0400
+
+    agregar archivo  txt vacio
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ echo "este es un cambio en el archivo" > archivo.txt
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   archivo.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git diff
+warning: LF will be replaced by CRLF in archivo.txt.
+The file will have its original line endings in your working directory
+diff --git a/archivo.txt b/archivo.txt
+index e69de29..f8f4e56 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -0,0 +1 @@
++este es un cambio en el archivo
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git add archivo.txt
+warning: LF will be replaced by CRLF in archivo.txt.
+The file will have its original line endings in your working directory
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git commit -m "agregar texto al achivo.txt"
+[master 18e05ed] agregar texto al achivo.txt
+ 1 file changed, 1 insertion(+)
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git log
+commit 18e05edf9cd14496e8d5a415090c3e2c4339eb74 (HEAD -> master)
+Author: zkr911 <63081032+zkr911@users.noreply.github.com>
+Date:   Sun Aug 4 23:11:38 2024 -0400
+
+    agregar texto al achivo.txt
+
+commit c168ff06b36e8c4b9bf8222bdb29f553076e50ad
+Author: zkr911 <63081032+zkr911@users.noreply.github.com>
+Date:   Sun Aug 4 23:10:07 2024 -0400
+
+    agregar archivo  txt vacio
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ echo "este es otro cambio en el archivo" >> archivo.txt
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git diff
+warning: LF will be replaced by CRLF in archivo.txt.
+The file will have its original line endings in your working directory
+diff --git a/archivo.txt b/archivo.txt
+index f8f4e56..3e35c48 100644
+--- a/archivo.txt
++++ b/archivo.txt
+@@ -1 +1,2 @@
+ este es un cambio en el archivo
++este es otro cambio en el archivo
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git checkout HEAD archivo.txt
+Updated 1 path from 90c9766
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ cat archivo.txt
+este es un cambio en el archivo
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$ git log
+commit 18e05edf9cd14496e8d5a415090c3e2c4339eb74 (HEAD -> master)
+Author: zkr911 <63081032+zkr911@users.noreply.github.com>
+Date:   Sun Aug 4 23:11:38 2024 -0400
+
+    agregar texto al achivo.txt
+
+commit c168ff06b36e8c4b9bf8222bdb29f553076e50ad
+Author: zkr911 <63081032+zkr911@users.noreply.github.com>
+Date:   Sun Aug 4 23:10:07 2024 -0400
+
+    agregar archivo  txt vacio
+
+nilzo@LAPTOP-41G4VLEI MINGW64 ~/Desktop/mi_directorio (master)
+$
